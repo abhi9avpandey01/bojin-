@@ -11,9 +11,8 @@ const app = express();
 // Connect DB, then start server
 connectDB();
 
-
-app.use("/", () => {
-   console.log("API is running...");
+app.use("/", (req,res) => {
+    res.json({message: "API IS RUNNING !!!!"})
 });
 
 app.use("/api/test", (req, res) => {
