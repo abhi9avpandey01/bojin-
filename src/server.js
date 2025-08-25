@@ -16,6 +16,10 @@ app.use("/", () => {
    console.log("API is running...");
 });
 
+app.use("/api/test", (req, res) => {
+   res.json({ message: "API is working properly" });
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
