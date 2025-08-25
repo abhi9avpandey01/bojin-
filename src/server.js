@@ -1,15 +1,15 @@
 import dotenv from "dotenv";
-import connectdb from "./db/index.js";
+import connectDB from "./db/index.js";
 import express from "express";
 
 dotenv.config({
-  path: "./env" // make sure you have an "env" file in your project root
+  path: "./.env" // make sure you have an "env" file in your project root
 });
 
 const app = express();
 
 // Connect DB, then start server
-connectdb();
+connectDB();
 
 
 app.use("/", () => {
